@@ -12,7 +12,7 @@ export function Performance({ active, progress }) {
       return <div key={character} className={`performance-actor ${character}`} style={{left:`${actor.x}%`,top:`${actor.y}%`,transform:`rotate(${actor.lean}deg)`,opacity:actor.opacity}}>
         {poses[character].map(pose => {
           const opacity = Number(pose === (actor.blend < .5 ? actor.pose : actor.nextPose));
-          return <img key={pose} src={`/assets/${pose}.png`} alt="" style={{opacity}}/>;
+          return <img decoding="async" key={pose} src={`/assets/${pose}.webp`} alt="" style={{opacity}}/>;
         })}
       </div>;
     })}

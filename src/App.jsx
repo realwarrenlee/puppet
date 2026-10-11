@@ -52,7 +52,7 @@ function Puppet({ phase, returned = false }) {
   const pose = phase < .34 ? 'puppet' : phase < .67 ? 'puppet-listen' : 'puppet-bow';
   const lean = Math.sin(phase * Math.PI * 2) * 4;
   return <div className={`actor ${returned ? 'return-actor' : ''}`} style={{ transform: `translateY(${Math.sin(phase * Math.PI) * -3}%) rotate(${lean}deg)` }}>
-    {['puppet', 'puppet-listen', 'puppet-bow'].map(name => <img key={name} src={`/assets/${name}.png`} alt="" style={{ opacity: name === pose ? 1 : 0 }}/>) }
+    {['puppet', 'puppet-listen', 'puppet-bow'].map(name => <img decoding="async" key={name} src={`/assets/${name}.webp`} alt="" style={{ opacity: name === pose ? 1 : 0 }}/>) }
   </div>;
 }
 
@@ -109,33 +109,33 @@ export function App() {
     {calm ? <main className="reading">
       {acts.map(chapter => <section key={chapter.name}>
         <h1>{chapter.lines[0][0]}</h1>
-        <div className="reading-art"><img src={`/assets/${chapter.image}.png`} alt={chapter.image === 'preparation-reveal' ? 'A side view reveals layered scenery, wooden stage supports and a practitioner inspecting a scenic panel at a worktable.' : chapter.image === 'rehearsal' ? 'A mentor and learner practise with glove puppets.' : chapter.image === 'scriptwriting' ? 'A cut-paper performer revises a script at a table.' : 'A miniature paper theatre with layered forest scenery.'}/>{chapter.image === 'world' && <img className={`reading-puppet ${chapter.name === 'The performance' ? 'reading-red' : ''}`} src="/assets/puppet.png" alt="A red and cream glove puppet with one sleeve raised."/>}{chapter.name === 'The performance' && <img className="reading-puppet reading-green" src="/assets/puppet-companion.png" alt="A green-robed glove puppet faces the red traveller."/>}</div>
-        {chapter.lines.map(([heading, text], n) => <div key={heading}>{n > 0 && chapter.images && chapter.images[n] !== chapter.images[n-1] && <img src={`/assets/${chapter.images[n]}.png`} alt={chapter.images[n] === 'stage-assembly' ? 'Paper hands fit tree scenery into the slots of a miniature stage.' : 'Two cut-paper practitioners rehearse together: one operates a rear-facing glove puppet and the other plays an electronic percussion pad.'}/>} {n > 0 && <h2>{heading}</h2>}<p>{text}</p></div>)}
+        <div className="reading-art"><img decoding="async" src={`/assets/${chapter.image}.webp`} alt={chapter.image === 'preparation-reveal' ? 'A side view reveals layered scenery, wooden stage supports and a practitioner inspecting a scenic panel at a worktable.' : chapter.image === 'rehearsal' ? 'A mentor and learner practise with glove puppets.' : chapter.image === 'scriptwriting' ? 'A cut-paper performer revises a script at a table.' : 'A miniature paper theatre with layered forest scenery.'}/>{chapter.image === 'world' && <img decoding="async" className={`reading-puppet ${chapter.name === 'The performance' ? 'reading-red' : ''}`} src="/assets/puppet.webp" alt="A red and cream glove puppet with one sleeve raised."/>}{chapter.name === 'The performance' && <img decoding="async" className="reading-puppet reading-green" src="/assets/puppet-companion.webp" alt="A green-robed glove puppet faces the red traveller."/>}</div>
+        {chapter.lines.map(([heading, text], n) => <div key={heading}>{n > 0 && chapter.images && chapter.images[n] !== chapter.images[n-1] && <img decoding="async" src={`/assets/${chapter.images[n]}.webp`} alt={chapter.images[n] === 'stage-assembly' ? 'Paper hands fit tree scenery into the slots of a miniature stage.' : 'Two cut-paper practitioners rehearse together: one operates a rear-facing glove puppet and the other plays an electronic percussion pad.'}/>} {n > 0 && <h2>{heading}</h2>}<p>{text}</p></div>)}
       </section>)}
     </main> : <main ref={journey} className="journey" aria-label="Enter the puppet world and discover the people behind it">
       <div className={`viewport act-${index}`}>
-        <div className="backstage scene" aria-hidden="true" style={{ transform: `scale(${1.14 - range(progress, .43, .62) * .14}) translateY(${-workshop * 10}%)` }}><img src="/assets/preparation-reveal.png" alt=""/></div>
+        <div className="backstage scene" aria-hidden="true" style={{ transform: `scale(${1.14 - range(progress, .43, .62) * .14}) translateY(${-workshop * 10}%)` }}><img decoding="async" src="/assets/preparation-reveal.webp" alt=""/></div>
         <div className="stage-world scene" aria-hidden="true" style={{ transform: `translateX(${-reveal * 190}%) scale(${1 + enter * .62})`, transformOrigin: '52% 55%', visibility: reveal === 1 ? 'hidden' : 'visible' }}>
-          <img className="world" src="/assets/world.png" alt=""/>
+          <img decoding="async" className="world" src="/assets/world.webp" alt=""/>
           <div className="performer-path" style={{ opacity: index > 2 ? 1 : 0, transform: `translateX(${-enter * 7}%)` }}><Puppet phase={range(progress,.36,.43)}/></div>
           <Performance active={index === 2} progress={range(progress,.12,.36)}/>
-          <img className="foreground" src="/assets/foreground.png" alt="" style={{ transform: `scale(${1.15 + enter * .8}) translateX(${-enter * 6}%)` }}/>
+          <img decoding="async" className="foreground" src="/assets/foreground.webp" alt="" style={{ transform: `scale(${1.15 + enter * .8}) translateX(${-enter * 6}%)` }}/>
         </div>
         <div className="workshop scene" aria-hidden="true" style={{ transform: `translateY(${(1 - workshop) * 105}%)`, visibility: workshop === 0 ? 'hidden' : 'visible' }}>
-          <img className="preparation-frame" src="/assets/scriptwriting.png" alt="" style={{transform:`scale(${scriptZoom})`}}/>
-          <img className="preparation-frame" src="/assets/stage-assembly.png" alt="" style={{transform:`translateX(${(1 - buildScene) * 105}%) scale(${buildZoom})`,visibility:buildScene === 0 ? 'hidden' : 'visible'}}/>
+          <img decoding="async" className="preparation-frame" src="/assets/scriptwriting.webp" alt="" style={{transform:`scale(${scriptZoom})`}}/>
+          <img decoding="async" className="preparation-frame" src="/assets/stage-assembly.webp" alt="" style={{transform:`translateX(${(1 - buildScene) * 105}%) scale(${buildZoom})`,visibility:buildScene === 0 ? 'hidden' : 'visible'}}/>
           <div className="cue-scenes" style={{transform:`translateY(${(1 - soundScene) * 105}%)`,visibility:soundScene === 0 ? 'hidden' : 'visible'}}>
-            {['cue-wait', 'cue-response', 'cue-bow'].map((image,n) => <img key={image} src={`/assets/${image}.png`} alt="" style={{visibility:n === cueIndex ? 'visible' : 'hidden',transform:`scale(${1 + range(progress, .746, .802) * .04})`}}/>)}
+            {['cue-wait', 'cue-response', 'cue-bow'].map((image,n) => <img decoding="async" key={image} src={`/assets/${image}.webp`} alt="" style={{visibility:n === cueIndex ? 'visible' : 'hidden',transform:`scale(${1 + range(progress, .746, .802) * .04})`}}/>)}
           </div>
         </div>
-        <div className="rehearsal scene" aria-hidden="true" style={{ transform: `translateX(${(1 - rehearsal) * 105}%)`, visibility: rehearsal === 0 ? 'hidden' : 'visible' }}><img src="/assets/rehearsal.png" alt="" style={{ transform: `scale(${1.08 - range(progress, .84, .93) * .08})` }}/></div>
+        <div className="rehearsal scene" aria-hidden="true" style={{ transform: `translateX(${(1 - rehearsal) * 105}%)`, visibility: rehearsal === 0 ? 'hidden' : 'visible' }}><img decoding="async" src="/assets/rehearsal.webp" alt="" style={{ transform: `scale(${1.08 - range(progress, .84, .93) * .08})` }}/></div>
         <div className="return-stage scene" aria-hidden="true" style={{ transform: `translateY(${(1 - returning) * 105}%)`, visibility: returning === 0 ? 'hidden' : 'visible' }}>
-          <img className="world" src="/assets/world.png" alt=""/>
+          <img decoding="async" className="world" src="/assets/world.webp" alt=""/>
           <Puppet phase={range(progress, .955, 1)} returned/>
-          <img className="foreground" src="/assets/foreground.png" alt="" style={{ transform: 'scale(1.22)' }}/>
+          <img decoding="async" className="foreground" src="/assets/foreground.webp" alt="" style={{ transform: 'scale(1.22)' }}/>
         </div>
-        <div className="curtain curtain-left" style={{ transform: `translateX(${-curtain * 102}%) scale(${1 + curtain * .1})`, visibility: curtain === 1 ? 'hidden' : 'visible' }} aria-hidden="true"><img src="/assets/curtain.png" alt=""/></div>
-        <div className="curtain curtain-right" style={{ transform: `translateX(${curtain * 102}%) scale(${1 + curtain * .1})`, visibility: curtain === 1 ? 'hidden' : 'visible' }} aria-hidden="true"><img src="/assets/curtain.png" alt=""/></div>
+        <div className="curtain curtain-left" style={{ transform: `translateX(${-curtain * 102}%) scale(${1 + curtain * .1})`, visibility: curtain === 1 ? 'hidden' : 'visible' }} aria-hidden="true"><img decoding="async" src="/assets/curtain.webp" alt=""/></div>
+        <div className="curtain curtain-right" style={{ transform: `translateX(${curtain * 102}%) scale(${1 + curtain * .1})`, visibility: curtain === 1 ? 'hidden' : 'visible' }} aria-hidden="true"><img decoding="async" src="/assets/curtain.webp" alt=""/></div>
         <section className={`caption ${index === 0 ? 'opening' : ''}`} key={`${index}-${lineIndex}`} style={index === 0 ? { opacity: openingOpacity } : undefined} aria-label={act.name}>
           <h1>{title}</h1><p>{body}</p>
           {index === 0 && <div className="invitation" aria-hidden="true"><ArrowDown size={26} weight="thin"/></div>}
@@ -150,7 +150,7 @@ export function App() {
       <p>He actively mentors young participants, including his niece and peers, by sharing puppetry skills, voice performance techniques, and cultural significance through cultural and community events, as well as staging rehearsals in his own home.</p>
       <p className="performance-note">Learn more about <a href="https://www.roots.gov.sg/ich-landing/ich/chinese-puppetry" target="_blank" rel="noreferrer">Chinese Puppetry</a> at ROOTS.sg by National Heritage Board.</p>
       {videoStarted ? <iframe className="story-video" src="https://www.youtube-nocookie.com/embed/TmdKp1ZMh0w?autoplay=1" title="Meet Adrian Ong Sin Yong — a film by Roots Sg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen/> : <button className="story-video video-preview" onClick={() => setVideoStarted(true)} aria-label="Play the film about Adrian Ong Sin Yong">
-        <img src="https://i.ytimg.com/vi/TmdKp1ZMh0w/maxresdefault.jpg" alt="" loading="lazy"/>
+        <img decoding="async" src="https://i.ytimg.com/vi/TmdKp1ZMh0w/maxresdefault.jpg" alt="" loading="lazy"/>
         <span className="video-play" aria-hidden="true"><Play size={32} weight="fill"/></span>
       </button>}
       <footer className="colophon"><p>Behind the Little Stage</p><p>An independent Culture × Tech experiment</p></footer>

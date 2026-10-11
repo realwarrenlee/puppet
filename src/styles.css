@@ -1,0 +1,65 @@
+:root{font-family:Georgia,'Times New Roman',serif;color:#21352f;background:#f4eddf;font-synthesis:none;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}body{margin:0;min-width:320px}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer}a{color:inherit}button:focus-visible,a:focus-visible{outline:2px solid #ba4c32;outline-offset:6px}button:hover,a:hover{color:#b04a31}.skip{position:fixed;top:-100px;left:20px;z-index:20;padding:15px;background:#f4eddf}.skip:focus{top:15px}.brand{font-size:11px;letter-spacing:2.4px;font-weight:600}.brand span{margin:0 10px;opacity:.5}.motion-toggle{font-size:12px;background:transparent;border:0;border-bottom:1px solid currentColor;padding:5px 0;margin-left:25px}.journey{height:720vh;position:relative}.viewport{position:sticky;top:0;height:100svh;min-height:500px;overflow:hidden;background:#18322b;isolation:isolate}.backstage,.stage-world{position:absolute;inset:0;will-change:transform}.backstage img,.world{width:100%;height:100%;object-fit:cover}.backstage img{object-position:65% 50%}.stage-world{z-index:2}.world{position:absolute;inset:0}.actor{position:absolute;left:34%;top:29%;width:32%;height:51%;object-fit:contain;transform-origin:50% 88%;will-change:transform}.foreground{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;will-change:transform}.curtain{position:absolute;inset:0;z-index:3;pointer-events:none;will-change:transform}.curtain img{width:100%;height:100%;object-fit:cover}.curtain-left{clip-path:inset(0 49.9% 0 0)}.curtain-right{clip-path:inset(0 0 0 49.9%)}.caption{position:absolute;z-index:4;left:5.5%;top:23%;max-width:36%;color:#f8efdd;padding:26px 30px 30px;background:transparent}.caption h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(36px,4.3vw,72px);line-height:1.04;letter-spacing:-2px;margin:22px 0;white-space:pre-line}.caption p{font-size:clamp(17px,1.45vw,24px);line-height:1.5;max-width:28em;margin:0}.eyebrow{display:block;font:11px/1.5 Georgia,serif;text-transform:uppercase;letter-spacing:2.8px}.caption.opening{left:0;top:20%;width:100%;max-width:none;text-align:center;background:none;padding:0 20px;text-shadow:0 2px 22px #3e130a}.opening h1{font-size:clamp(65px,8.5vw,140px);letter-spacing:-5px;margin:24px 0 20px}.opening p{margin:0 auto;font-size:clamp(18px,1.7vw,27px)}.invitation{display:flex;align-items:center;flex-direction:column;gap:12px;margin-top:45px;font-size:14px;letter-spacing:.5px}.beat-1 .caption,.beat-2 .caption{top:auto;bottom:12%;left:5%;max-width:35%;padding:22px 25px}.beat-1 .caption h1,.beat-2 .caption h1{font-size:clamp(30px,3.4vw,55px)}.beat-3 .caption{top:16%}.beat-4 .caption,.beat-5 .caption{background:transparent;max-width:35%;left:3%;top:23%}.ending{padding:110px 9% 40px;background:#f4eddf;min-height:100svh}.ending h2{font:500 clamp(48px,6.5vw,105px)/1.03 'Fraunces',Georgia,serif;letter-spacing:-3px;margin:30px 0}.ending>p{max-width:none;font-size:21px;line-height:1.65}.colophon{margin-top:85px;padding-top:25px;border-top:1px solid #21352f30;display:flex;justify-content:space-between;gap:50px;font-size:12px;line-height:1.7}.colophon p{max-width:470px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.reading{padding-top:100px}.reading section{max-width:1100px;padding:65px 30px;margin:auto}.reading h1{font:500 clamp(40px,5vw,70px)/1.1 'Fraunces',serif;white-space:pre-line}.reading p{font-size:22px;line-height:1.5;max-width:650px}.reading img{width:100%;max-height:650px;object-fit:cover;margin-top:25px}.reading~.ending{border-top:1px solid #21352f30}
+@media(min-width:1600px){.caption{max-width:32%}}
+@media(max-width:700px){.brand{font-size:9px;letter-spacing:1.5px}.brand span{margin:0 5px}.motion-toggle{font-size:11px;margin-left:auto}.journey{height:620vh}.viewport{min-height:580px}.opening h1{font-size:clamp(60px,15vw,100px);letter-spacing:-3px}.caption.opening{top:23%;padding:0 20px}.opening p{max-width:260px}.curtain img{object-fit:cover}.world{object-position:50% 50%}.actor{left:16%;width:68%;top:24%;height:47%}.caption,.beat-1 .caption,.beat-2 .caption,.beat-3 .caption,.beat-4 .caption,.beat-5 .caption{left:6%;right:6%;max-width:none;top:auto;bottom:11%;padding:20px;background:transparent}.caption h1,.beat-1 .caption h1,.beat-2 .caption h1{font-size:36px;letter-spacing:-1.2px;margin:12px 0}.caption p{font-size:17px;line-height:1.45}.caption.opening{bottom:auto;background:none}.caption.opening h1{font-size:clamp(60px,15vw,100px)}.backstage img{object-position:76% 50%}.ending{padding:75px 7% 30px}.ending h2{letter-spacing:-2px}.ending>p{font-size:19px}.colophon{flex-direction:column;gap:0;margin-top:60px}.reading section{padding:45px 22px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important}}
+/* Full narrative extension: preserve the approved paper palette and type. */
+.journey{height:1900vh}
+.scene{position:absolute;inset:0;overflow:hidden;will-change:transform}
+.scene>img{width:100%;height:100%;object-fit:cover}
+.performer-path{position:absolute;inset:0}
+.actor{left:33%;top:29%;width:34%;height:52%}
+.actor img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .22s linear}
+.backstage{z-index:0}.stage-world{z-index:1}.workshop{z-index:2}.rehearsal{z-index:3}.return-stage{z-index:4}.curtain{z-index:5}.caption{z-index:6}
+.caption{top:20%;left:4%;max-width:33%;padding:25px 28px;background:transparent}
+.caption h1{font-size:clamp(34px,4vw,66px)}
+.caption p{font-size:clamp(17px,1.4vw,23px)}
+.caption.opening{background:none;top:22%;max-width:none;left:0}
+.opening h1{font-size:clamp(65px,8.5vw,140px)}
+.act-1 .caption,.act-2 .caption{top:auto;bottom:11%;max-width:32%}
+.act-3 .caption,.act-4 .caption{top:14%}
+.act-5 .caption,.act-6 .caption,.act-7 .caption{background:transparent;top:16%;max-width:32%}
+.act-8 .caption{top:auto;bottom:12%;max-width:32%}
+.workshop>img{object-position:60% 50%;transform-origin:65% 65%}
+.rehearsal>img{object-position:60% 50%;transform-origin:65% 50%}
+.return-actor{top:28%}.motion-toggle{position:fixed;right:4.5%;top:24px;z-index:15;color:#f8efdd;background:#19332c;padding:9px 12px;border:1px solid #f8efdd50;font-size:11px}.motion-toggle:hover{color:#fff;background:#315047}.motion-toggle.on-paper{color:#21352f;background:#f4eddf}.motion-toggle:disabled{cursor:default}
+.reading-art{position:relative}.reading-art>img{display:block}.reading-art .reading-puppet{position:absolute;width:30%;height:55%;object-fit:contain;left:35%;top:22%;margin:0}.reading h2{font:500 30px/1.2 'Fraunces',serif;margin-top:40px}
+@media(max-width:700px){.journey{height:2000vh}.brand{max-width:150px;line-height:1.8}.motion-toggle{right:5%;top:19px}.caption,.act-1 .caption,.act-2 .caption,.act-3 .caption,.act-4 .caption,.act-5 .caption,.act-6 .caption,.act-7 .caption,.act-8 .caption{left:5%;right:5%;max-width:none;top:auto;bottom:9%;padding:20px;background:transparent}.caption h1{font-size:34px;line-height:1.08;letter-spacing:-1px;margin:12px 0}.caption p{font-size:16px;line-height:1.45}.caption.opening{top:24%;bottom:auto;left:0;right:0;background:none}.opening h1{font-size:clamp(58px,15vw,100px);letter-spacing:-3px}.opening p{font-size:18px}.actor{left:15%;top:23%;width:70%;height:44%}.workshop>img{object-position:65% 50%}.rehearsal>img{object-position:75% 50%}.backstage img{object-position:78% 50%}.invitation{margin-top:30px}}
+@media(min-width:701px){.act-5 .caption,.act-6 .caption,.act-7 .caption{background:transparent;text-shadow:0 2px 10px #10281b;max-width:35%;left:3%;padding:25px 28px}}
+
+/* Soft glass keeps the artwork visible behind the story. */
+.caption{text-shadow:0 2px 12px #10281bcc}
+.viewport .caption:not(.opening){border-radius:24px;background:linear-gradient(135deg,#f8efdd20,#17312870);border:1px solid #f8efdd40;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:inset 0 1px 0 #fff2,0 8px 30px #10281b20}
+.viewport .caption:not(.opening){padding:28px}
+.viewport .caption:not(.opening) h1{font-size:clamp(30px,3.6vw,60px);margin:0 0 18px}
+@media(max-width:700px){.viewport .caption:not(.opening){padding:20px}.viewport .caption:not(.opening) h1{font-size:30px;margin-bottom:16px}}
+@media(min-width:701px){.viewport{--caption-edge:clamp(24px,4vw,64px)}.viewport .caption:not(.opening){left:var(--caption-edge);top:var(--caption-edge);bottom:auto}.viewport.act-1 .caption,.viewport.act-2 .caption,.viewport.act-8 .caption{top:auto;bottom:var(--caption-edge)}}
+.invitation svg{animation:scroll-nudge 3s ease-in-out infinite}
+@keyframes scroll-nudge{0%,70%,100%{transform:translateY(0)}35%{transform:translateY(6px)}}
+@media(prefers-reduced-motion:reduce){.invitation svg{animation:none}}
+
+.story-video{display:block;width:100%;max-width:none;aspect-ratio:16/9;border:0;border-radius:16px;margin-top:40px;background:#18322b}
+.video-preview{position:relative;padding:0;overflow:hidden}
+.video-preview img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+.video-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:76px;height:58px;border-radius:16px;background:#c43125;color:#fff;box-shadow:0 4px 20px #0003;transition:background .2s}
+.video-preview:hover .video-play,.video-preview:focus-visible .video-play{background:#e13b2c}
+.colophon p:last-child{text-align:right}
+
+.performance-cast{position:absolute;inset:0;overflow:hidden;z-index:2}
+.performance-actor{position:absolute;width:26%;height:49%;transform-origin:50% 88%;will-change:left,top,transform}
+.performance-actor img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.performer-path .actor{left:53%;width:26%;height:49%}
+
+
+
+
+
+.preparation-frame{position:absolute;inset:0}
+.cue-scenes{position:absolute;inset:0;overflow:hidden}
+.cue-scenes img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;transform-origin:65% 50%}
+@media(max-width:700px){.cue-scenes img{object-position:76% 50%}}
+.reading-art .reading-red{left:20%;width:27%}.reading-art .reading-green{left:53%;width:27%}
+.ending .performance-note{font-size:14px;line-height:1.6;opacity:.8;margin-top:35px}
+@media(max-width:700px){.performance-actor{width:30%;height:42%;margin-top:4%}.workshop>img{object-position:70% 50%}}
+@media(prefers-reduced-motion:reduce){.preparation-frame{transition:none}}
+@media(max-width:700px){.colophon{flex-direction:row;gap:20px}.colophon p{max-width:48%}}

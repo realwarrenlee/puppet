@@ -1,6 +1,6 @@
 # Behind the Little Stage
 
-A React/Vite web experience for Common Ground Makeathon, with nine connected scroll chapters and a two-character paper performance.
+A React/Vite web experience for **Common Ground Makeathon on 11 October 2026**, with nine connected scroll chapters and a two-character paper performance.
 
 Use native scrolling; no clicks are required in the illustrated story. The operating system's reduced-motion preference automatically selects a complete illustrated reading version. The optional [Roots.sg](https://roots.sg/) film at the end loads when you click its play button.
 

@@ -29,8 +29,6 @@ Open the URL printed in the terminal.
 
 ## Profile
 
-![Adrian Ong](https://www.nhb.gov.sg/api/media/7a174d94-cd47-49db-8abc-6ad0cf2cbde2/Adrian_Ong.jpg)Image Credit: National Heritage Board
-
 [Outstanding Youth in ICH Award: Adrian Ong Sin Yong (Chinese Puppetry)](https://www.youtube.com/watch?v=TmdKp1ZMh0w) 
 
 Mr Adrian Ong Sin Yong is a youth practitioner of Chinese puppetry with over a decade of experience. His practice in Chinese puppetry encompasses Hokkien glove puppetry and Hokkien string puppetry. Balancing his passion for puppetry with his full-time job, he regularly performs at major festive occasions for deities' birthday celebrations in local temples. Besides being a puppeteer, he has taken up multiple roles of scriptwriter, sound technician, and stage builder to ensure the continuity of his practice. Recognising the declining availability of live musicians, he has innovatively incorporated pre-recorded music and electronic drum kits as alternatives to traditional live accompaniment while retaining the cultural integrity of the practice. He actively mentors young participants, including his niece and peers, by sharing puppetry skills, voice performance techniques, and cultural significance through cultural and community events, as well as staging rehearsals in his own home.
